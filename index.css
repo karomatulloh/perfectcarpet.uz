@@ -1,0 +1,538 @@
+/* Fonts */
+@font-face {
+    font-family: metex;
+    src: url(fonts/Metropolis-ExtraBold.otf);
+}
+
+@font-face {
+    font-family:metbo ;
+    src: url(fonts/Metropolis-Bold.otf);
+}
+
+@font-face {
+    font-family: metsemi ;
+    src: url(fonts/Metropolis-SemiBold.otf);
+}
+
+@font-face {
+    font-family:metreg ;
+    src: url(fonts/Metropolis-Regular.otf);
+}
+
+@font-face {
+    font-family:metmed ;
+    src: url(fonts/Metropolis-Medi Fonts); 
+}
+
+/* Fonts */
+
+/* General styles */
+body {
+    max-width: 500px;
+    padding: 0%;
+    margin: 0% auto;
+    background-color: #f9f9f9;
+    font-family: Segoe UI;
+    font-weight: 500;
+}
+button {
+    outline: none;
+}
+a {
+    text-decoration: none !important
+}
+/* General styles */
+
+/* Body */
+
+
+
+/*Body*/
+
+
+/* Menu */
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    top: 0;
+    left: 0px;
+    display: inline-block;
+    transition: all 3s ease;
+}
+.header::before {
+    content: '';
+    width:100% ;
+    top: 0;
+    left: 0;
+    background-color:none;
+    height: 100%;
+    position: absolute;
+    transition-duration:1s;
+    z-index: 2;
+}
+.header_body  {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    z-index: 2;
+    background-color: #fff;
+}
+.header_list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 5px;
+    margin-right: 30px;
+}
+.header_list li {
+    list-style: none;
+    margin: 0px 0px 0px 10px ;
+}
+
+.header_link  {
+    font-size: 23px;
+    color: #000;
+    text-decoration: none;
+    font-family: Segoe UI;
+    font-weight: 500;
+}
+.header_logo {
+    display: flex;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+}
+.header_logo img {
+    width: 70px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.header_burger {
+    display: none;
+}
+.img23 {
+    width: 130px;
+}
+@media (max-width:750px){
+    .header_logo {
+        margin-top: 13px;
+    }
+    .header_body {
+        height: 50px;
+    }
+    .header_burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+}
+    .header_burger::before,
+    .header_burger::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition:all 0.3s ease 0s;
+    }
+    .header_burger::before {
+        top: 7px;
+        margin-left: -10px;
+    }
+    .header_burger::after {
+        bottom: -5px;
+        margin-left: -10px;
+    }
+.header_burger span {
+    position: absolute;
+    background-color: black;
+    left: 0;
+    height: 2px;
+    top: 15px;
+    position: absolute;
+    width: 100%;
+    margin-left: -10px;
+    transition:all 0.3s ease 0s;
+}
+.header_menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 103%;
+    background-color: #fff;
+    padding: 0px 80px 40px 20px;
+    transition:all 0.5s ease 0s;
+    margin-left: -40px;
+}
+.header_menu.active {
+    top: 0;
+    height: 50%;
+    padding-top: 50px;
+}
+.header_menu.unactive {
+    height: 0%;
+}
+.header {
+    background-color: #fff;
+}
+.header_list {
+    display: block;
+}
+.header_list li {
+    margin: 0px 0px 16px 0px;
+}
+
+}
+    .header_burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+}
+    .header_burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+.header_burger.active span {
+    transform: scale(0);
+}
+
+/* Menu */
+
+.container {
+    padding: 0px 20px; 
+}
+
+/* Wrapper */
+
+.wrapper {
+    height: 17rem;
+    background-image: url(img/wrapper-bg2.jpg), linear-gradient(rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    margin-top: 15px;
+}
+.wrapper__container {
+    padding: 30px 20px 20px 20px;
+}
+.wrapper__title {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+.wrapper__text {
+    color: white;
+    font-weight: 300;
+    font-size: 22px;       
+}
+.wrapper__button  {
+    background-color: #fceb05;
+    border: none;
+    padding:13px 25px ;
+    font-weight: 700;
+    border-radius: 20px;
+    box-shadow: 0px 5px 0px rgb(255 255 255 / 40%), 0 0 0 transparent;
+}
+.wrapper__button:hover {
+    box-shadow: none;
+    transition-duration: 1s;
+    transition-property: box-shadow;
+    transition-timing-function: ease;
+    background-color: #fceb05;
+}
+
+/* Wrapper */
+
+/* About */
+
+.about__title {
+    font-size: 30px;
+
+}
+.about__text {
+    margin-top: 10px;
+    font-weight: 400;
+}
+/* About */
+
+/* Services */
+
+.services {
+
+}
+.container {
+
+}
+.services__row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.services__column {
+    background-color: #fff;
+    padding: 20px; 
+    border-radius: 10px;
+}
+
+.services__column__img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+.services__column__title {
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+    display: block;
+}
+.services__column__text {
+    font-weight: 400;
+    font-size: 17px;
+}
+.services__column__button {
+    background-color: #fceb05;
+    border: none;
+    padding:13px 25px ;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+/* Services */
+
+/* Price */
+
+.price {
+}
+.container {
+}
+.price__title {
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    padding: 5px;
+    font-weight: 400;
+}
+th {
+    padding: 8px;
+    font-weight: 600;
+}
+.prices__button {
+    background-color: #fceb05;
+    border: none;
+    padding:13px 25px ;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 0px rgb(254, 245, 129), 0 0 0 transparent;
+
+}
+.prices__button:hover {
+    box-shadow: none;
+    transition-duration: 1s;
+    transition-property: box-shadow;
+    transition-timing-function: ease;
+}
+.pb {
+        display: flex;
+    justify-content: center;
+}
+/* Price */
+
+/* Work */
+
+.work__img {
+    max-width: 215px;
+    border-radius: 500px;
+}
+.work {
+    text-align: center;
+}
+.work__title {
+    display: flex;
+    margin-top: -150px; 
+    font-size: 50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    
+}
+.work__text {
+    font-weight: 400;
+    font-size: 19px;
+}
+/* Work */
+
+/* Questions */
+
+.questions {
+    background-image: url(img/gilam2.jpg);
+    background-size: cover;
+    padding: 40px 0px;
+}
+.questions__title {
+    font-size: 22px;
+    color: #fff;
+}
+.questions__button {
+    background-color: #fceb05;
+    border: none;
+    padding:13px 25px ;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 0px rgb(255 255 255 / 40%), 0 0 0 transparent;
+}
+.questions__button:hover {
+    box-shadow: none;
+    transition-duration: 1s;
+    transition-property: box-shadow;
+    transition-timing-function: ease;
+}
+.question__button__link {
+    color: #000;
+
+}
+
+/* Questions */
+
+/* Footer */
+
+.footer {
+    background-color: #fceb05;
+}
+.footer__container {
+    padding: 20px 20px;
+}
+.description {
+    font-weight: 400;
+    color: #000;
+}
+.icon {
+    color: #000;
+    
+}
+.icon i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+.icon_i {
+    font-size: 35px;
+}
+/* Footer */
+
+
+
+     /* Mahsulotlar katalogi*/
+
+/* Mahsulotlar katalogi forma */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 87.5%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-right: 10px;
+}
+.mahsulot_boglanish_1 {
+/*  padding-top:20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 10px !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important; */
+}
+.mahsulot_boglanish_forma_1 {
+    background-color: #fff !important;
+    float: right !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin-top: -180px !important;
+    align-self: center ;
+    width: 100%;
+    text-align: center;
+}
+
+.tugash_boglanish_forma_nomlar_1 {
+
+}
+.mahsulot_boglanish_forma_nom1_1 {
+    color: #1f1f14 !important;
+
+    
+    font-size: 16pt !important;
+}
+.mahsulot_boglanish_forma_nom2_1 {
+    color: #1f1f14 !important;
+
+    margin-left: -95px !important;
+    font-size: 12pt !important;
+}
+.mahsulot_boglanish_forma_inputs_1 {
+    outline: none !important;
+    border : 1px solid #fceb05 !important;
+    font-size: 12pt !important;
+    width: 87.5% !important;
+    font-weight : 500 !important;
+    padding: 10px !important;
+}
+.mahsulot_boglanish_forma_knopka_1 {
+    color: black !important;
+    background-color: #fceb05 !important;
+    text-align: center !important;
+    width: 94.0% !important;
+    font-weight: 500 !important;
+    padding: 13px !important;
+    border: none !important;
+    font-size: 12pt !important;
+    transition: 2s ease-in color !important;
+    font-family: Segoe UI;
+}
+.mahsulot_boglanish_forma_knopka_1:hover {
+    transition: 2s ease-in-out !important;
+    background-color: black !important;
+}
+.mahsulot_boglanish_forma_inputlar_1 {
+    text-align: center !important;
+}
+
+/* Mahsulotlar katalogi forma */           
